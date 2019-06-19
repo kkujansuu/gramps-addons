@@ -1,0 +1,110 @@
+# English translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PlaceTool\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-06-13 10:47+0300\n"
+"PO-Revision-Date: 2019-06-19 11:19+0300\n"
+"Language: en\n"
+"Language-Team: he\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: PlaceTool.gpr.py:3 PlaceTool.gpr.py:14
+msgid "PlaceTool"
+msgstr "כלי-מקום"
+
+#: PlaceTool.gpr.py:4
+msgid "Gramplet to manipulate multiple places"
+msgstr "גרמפלט לתמרון ריבוי מקומות"
+
+#: PlaceTool.py:56
+msgid "Set properties for multiple places"
+msgstr "נגדרת מאפיינים למספר מקומות"
+
+#: PlaceTool.py:78 PlaceTool.py:118
+msgid "None"
+msgstr "ללא"
+
+#: PlaceTool.py:95
+msgid ""
+"This gramplet allows setting properties for multiple places at the same "
+"time"
+msgstr "הגרמפלט מאפשר הגדרת מאפיינים למספר מקומות בו זמנית"
+
+#: PlaceTool.py:101
+msgid "Place type:"
+msgstr "סוג מקום:"
+
+#: PlaceTool.py:107
+msgid "Tag:"
+msgstr "תג:"
+
+#: PlaceTool.py:113
+msgid "New enclosing place"
+msgstr "מקום מכיל חדש"
+
+#: PlaceTool.py:132
+msgid "Set enclosing place"
+msgstr "הגדרת מקום מכיל"
+
+#: PlaceTool.py:136
+msgid "Clear original enclosing places"
+msgstr "מחיקת המקום המכיל המקורי"
+
+#: PlaceTool.py:139
+msgid "Clear tags"
+msgstr "ניקוי תגים"
+
+#: PlaceTool.py:142
+msgid "Generate hierarchy"
+msgstr "חילול היררכיה"
+
+#: PlaceTool.py:148
+msgid "use spaces as separator"
+msgstr "שימוש ברווח כמפריד"
+
+#: PlaceTool.py:152
+msgid "reverse hierarchy"
+msgstr "היפוך היררכיה"
+
+#: PlaceTool.py:158
+msgid "Replace text"
+msgstr "החלפת מלל"
+
+#: PlaceTool.py:161
+msgid "Use regex"
+msgstr "שימוש בביטוי רגיל (regex)"
+
+#: PlaceTool.py:171
+msgid "Old text:"
+msgstr "מלל ישן:"
+
+#: PlaceTool.py:179
+msgid "New text:"
+msgstr "מלל חדש:"
+
+#: PlaceTool.py:194
+msgid "Clear selections"
+msgstr "ניקוי בחירה"
+
+#: PlaceTool.py:198
+msgid "Apply to selected places"
+msgstr "החלה על המקום שנבחר"
+
+#: PlaceTool.py:217
+msgid "Please select a place that will be set as an enclosing place"
+msgstr "נא לבחור מקום שישמש כמקום המכיל"
+
+#: PlaceTool.py:237
+msgid "Setting place properties"
+msgstr "הגדרת מאפייני מקום"
