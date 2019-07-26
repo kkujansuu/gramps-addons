@@ -1,0 +1,1 @@
+{"t":'Gramplet',"i":'PlaceTool Gramplet',"n":'PlaceTool Gramplet',"v":'0.1',"g":'5.0',"d":'Gramplet to set properties for multiple places',"z":'PlaceTool.tar.gz'}
