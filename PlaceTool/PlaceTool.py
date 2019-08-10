@@ -395,16 +395,15 @@ class PlaceTool(Gramplet):
 
     def get_top_level(self,enclosing_handles):
         top_level = {}
-        if enclosing_handles == []:
-            for handle in self.dbstate.db.find_place_child_handles(''):
-                place = self.dbstate.db.get_place_from_handle(handle)
-                top_level[place.get_name().get_value()] = (handle,place)
-        else:
-            for enclosing_handle in enclosing_handles:
-                for obj, handle in self.dbstate.db.find_backlink_handles(enclosing_handle, ['Place']):
-                    place = self.dbstate.db.get_place_from_handle(handle)
-                    top_level[place.get_name().get_value()] = (handle,place)
+        enclosing_handles_set = set(enclosing_handles)
+        for handle in self.dbstate.db.get_place_handles():
+            place = self.dbstate.db.get_place_from_handle(handle)
+            name = place.get_name().get_value()
+            if enclosing_handles == []:
+                if place.get_placeref_list() == []:
+                    top_level[name] = (handle,place)
+            elif enclosing_handles_set.intersection(place.get_placeref_list()):
+                top_level[name] = (handle,place)
         return top_level
-
 
     

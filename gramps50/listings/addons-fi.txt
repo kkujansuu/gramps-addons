@@ -1,2 +1,2 @@
-{"t":'Gramplet',"i":'PlaceTool',"n":'Paikkatyökalu',"v":'0.1',"g":'5.0',"d":'Gramplet jolla voi käsitellä useita paikkoja kerrallaan',"z":'PlaceTool.tar.gz'}
+{"t":'Gramplet',"i":'PlaceTool',"n":'Paikkatyökalu',"v":'0.2',"g":'5.0',"d":'Gramplet jolla voi käsitellä useita paikkoja kerrallaan',"z":'PlaceTool.tar.gz'}
 
