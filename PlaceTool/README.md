@@ -14,7 +14,7 @@ Place names can be edited by substituting substrings with new values.
 
 The gramplet can also generate a place hierarchy from place names or titles.
 
-![PlaceTool UI](PlaceTool/PlaceTool+UI.png)
+![PlaceTool UI](PlaceTool+UI.png)
 
 **Setting enclosing place**
 
