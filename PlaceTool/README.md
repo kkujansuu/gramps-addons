@@ -12,7 +12,9 @@ The properties that can be changed are:
 
 Place names can be edited by substituting substrings with new values.
 
-The gramplet can also generate a place hierarchy from place names or titles.
+The gramplet can also generate a place hierarchy from place names or titles. 
+
+The gramplet is installed on the gramplet pane of the Places view and the place list is used to select which places are affected.
 
 ![PlaceTool UI](PlaceTool%20UI.png)
 
@@ -30,6 +32,8 @@ This can e.g. be used to "move" the places under another place.
 
 Attempts to set a duplicate enclosing place or a loop (so that a place contains itself) 
 are quietly bypassed.
+
+![Setting enclosing place](PlaceTool-example.png)
 
 **Setting place type or tag**
 
