@@ -60,11 +60,9 @@ class PlaceTool(Gramplet):
         self.__clear(None)
         
     def __typenames(self):
-        for pt in self.dbstate.db.get_place_types():
-            yield pt
+        yield from self.dbstate.db.get_place_types()
         place_type_instance = PlaceType()
-        for pt in place_type_instance.get_standard_names():
-            yield pt
+        yield from place_type_instance.get_standard_names()
 
     def __tagnames(self):
         for handle in self.dbstate.db.get_tag_handles(sort_handles=True):
@@ -230,15 +228,9 @@ class PlaceTool(Gramplet):
     def __apply(self,obj):
         with DbTxn(_("Setting place properties"), self.dbstate.db) as self.trans:
             tagname = self.tagcombo.get_child().get_text().strip()
-            if tagname:
-                tag = self.__find_tag(tagname)           
-            else:
-                tag = None
+            tag = self.__find_tag(tagname) if tagname else None
             typename = self.typecombo.get_child().get_text().strip()
-            if typename:
-                ptype = PlaceType(typename)
-            else:
-                ptype = None
+            ptype = PlaceType(typename) if typename else None
             selected_handles = self.uistate.viewmanager.active_page.selected_handles()
             num_places = len(selected_handles)
             for handle in selected_handles:
@@ -293,9 +285,10 @@ class PlaceTool(Gramplet):
         # True if handle1 encloses handle2 (possibly indirectly)
         if handle1 == handle2: return True
         place = self.dbstate.db.get_place_from_handle(handle2)
-        for placeref in place.placeref_list:
-            if self.__encloses(handle1, placeref.ref): return True
-        return False
+        return any(
+            self.__encloses(handle1, placeref.ref)
+            for placeref in place.placeref_list
+        )
     
     def __set_enclosing_place(self,place):
         if not self.selected_handle: return
@@ -399,10 +392,12 @@ class PlaceTool(Gramplet):
         for handle in self.dbstate.db.get_place_handles():
             place = self.dbstate.db.get_place_from_handle(handle)
             name = place.get_name().get_value()
-            if enclosing_handles == []:
-                if place.get_placeref_list() == []:
-                    top_level[name] = (handle,place)
-            elif enclosing_handles_set.intersection(place.get_placeref_list()):
+            if (
+                enclosing_handles == []
+                and place.get_placeref_list() == []
+                or enclosing_handles != []
+                and enclosing_handles_set.intersection(place.get_placeref_list())
+            ):
                 top_level[name] = (handle,place)
         return top_level
 
